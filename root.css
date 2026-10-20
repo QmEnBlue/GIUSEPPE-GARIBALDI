@@ -1,0 +1,15 @@
+:root {
+    --background-color: #191919;
+    --container-color: #1E1E1E;
+    --secondary-color-text: #333333;
+    --primary-color-text: #E5E5E5;
+    --accent-color: #b11b2c;
+    --hover-accent-color: #b62738;
+    --shadow-color: #0D0D0D;
+    --border-color: #6B6B6B;
+    --element-color: #ffffff;
+
+    --france-color-one: #009246;
+    --france-color-second: #ffffff;
+    --france-color-third: #ce2b37;
+}
