@@ -7,8 +7,11 @@
 
     color: var(--primary-color-text);
 
+    font-weight: 100;
     font-family: "Mate", serif;
     font-size: 16px;
+
+    letter-spacing: 0.05vw;
 }
 
 html {
@@ -19,6 +22,7 @@ html {
 
 a {
     color: unset;
+    text-decoration: none;
 }
 
 .border{
@@ -26,7 +30,57 @@ a {
 }
 
 .section {
-    height: 50vh;
+    height: 40vh;
+
+    display: grid;
+    align-items: center;
+}
+
+.simbol {
+    color: var(--accent-color);
+    font-size: 4em;
+}
+
+.text {
+    font-style: italic;
+}
+
+.second-text {
+    color: var(--secondary-color-text);
+}
+
+/* */
+
+.container {
+    display: grid;
+    height: 80%;
+
+    gap: 2vh;
+}
+
+.second-name {
+    font-size: 1em;
+    letter-spacing: 0.2vw;
+    color: var(--accent-color);
+}
+
+.first-name {
+    font-size: 1.8em;
+}
+
+.prime-text {
+    font-size: 1.1em;
+    letter-spacing: 0.1vw;
+    line-height: 3vh;
+}
+
+.link {
+    position: relative;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: var(--accent-color);
 }
 
 header, section {
@@ -69,9 +123,9 @@ header {
 
     background: linear-gradient(
     to right, 
-    var(--accent-color) 0%, var(--accent-color) 33.33%, /* Зеленый (первая треть) */
-    var(--element-color) 33.33%, var(--element-color) 66.66%, /* Белый (вторая треть) */
-    var(--accent-color) 66.66%, var(--accent-color) 100% /* Красный (последняя треть) */
+    var(--france-color-one) 0%, var(--france-color-one) 33.33%,
+    var(--france-color-second) 33.33%, var(--france-color-second) 66.66%,
+    var(--france-color-third) 66.66%, var(--france-color-third) 100%
   );
 }
 
@@ -84,7 +138,7 @@ header {
 }
 
 .nav-li {
-  position: relative;
+    position: relative;
 }
 
 .nav-li::after {
@@ -116,8 +170,8 @@ header {
 .main-container {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    padding-top: 10vh;
+    gap: 3vh;
+    padding-top: 15vh;
 }
 
 .main-second-name{
@@ -134,7 +188,6 @@ header {
 
 .main-text {
     font-size: 1.1em;
-    letter-spacing: 0.1vw;
     line-height: 3.5vh;
 }
 
@@ -154,12 +207,64 @@ header {
 }
 
 #about-her {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 2vw;
+    grid-template-columns: 1fr auto 1fr;
 }
 
 .about-her-image {
-    width: 30vw;
-    height: 40vh;
+    width: 100%;
+    height: 80%;
+}
+
+.about-her-quote {
+    margin-left: auto;
+    position: relative;
+    display: grid;
+    gap: 1vh;
+}
+
+.about-her-quote-simbol {
+    position: absolute;
+    left: -15%;
+    bottom: 65%;
+}
+
+.about-her-quote-text {
+    font-size: 1.3em;
+    line-height: 3.5vh;
+}
+
+#philosophy {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.philosophy-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.philosophy-block {
+    position: relative;
+    padding: 3vh;
+    width: 25vh;
+    height: 25vh;
+    border: 1px solid var(--border-color);
+
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    gap: 1vh;
+}
+
+.philosophy-block-simbol {
+    position: absolute;
+    left: 10%;
+    bottom: 70%;
+}
+
+.philosophy-text {
+    font-size: 1.1em;
+    line-height: 3vh;
+
+    margin-top: 4vh;
 }
