@@ -3,13 +3,14 @@
     --container-color: #1E1E1E;
     --secondary-color-text: #6B6B6B;
     --primary-color-text: #E5E5E5;
+    --second-color-text: #c2c2c2;
     --accent-color: #9c1928;
     --hover-accent-color: #b62738;
     --shadow-color: #0D0D0D;
     --border-color: #333333;
     --element-color: #ffffff;
     
-    --france-color-one: #009246;
-    --france-color-second: #ffffff;
-    --france-color-third: #ce2b37;
+    --italic-color-one: #009246;
+    --italic-color-second: #ffffff;
+    --italic-color-third: #ce2b37;
 }

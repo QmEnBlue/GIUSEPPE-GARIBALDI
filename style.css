@@ -42,6 +42,10 @@ a {
 }
 
 .text {
+    color: var(--second-color-text);
+}
+
+.text-italic {
     font-style: italic;
 }
 
@@ -83,16 +87,18 @@ a {
     color: var(--accent-color);
 }
 
-header, section {
+header, section, footer {
     padding: 0 10vw 0 10vw;
+}
+
+header, footer {
+    height: 8vh;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-
-    height: 10vh;
 }
 
 .header-background {
@@ -123,9 +129,9 @@ header {
 
     background: linear-gradient(
     to right, 
-    var(--france-color-one) 0%, var(--france-color-one) 33.33%,
-    var(--france-color-second) 33.33%, var(--france-color-second) 66.66%,
-    var(--france-color-third) 66.66%, var(--france-color-third) 100%
+    var(--italic-color-one) 0%, var(--italic-color-one) 33.33%,
+    var(--italic-color-second) 33.33%, var(--italic-color-second) 66.66%,
+    var(--italic-color-third) 66.66%, var(--italic-color-third) 100%
   );
 }
 
@@ -160,11 +166,10 @@ header {
 
 .header-insert {
     text-align: end;
-    font-style: italic;
 }
 
 #main {
-    height: 90vh;
+    height: 92vh;
 }
 
 .main-container {
@@ -267,4 +272,129 @@ header {
     line-height: 3vh;
 
     margin-top: 4vh;
+}
+
+#biography {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+}
+
+.timeline-item {
+    position: relative;
+    flex: 1;
+    padding-top: 3vh;
+    padding-left: 3vw;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--secondary-color-text);
+    z-index: 1;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: -0.5vh;
+    left: 5vw;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    z-index: 2;
+}
+
+.timeline-date {
+    font-size: 1.6em;
+    margin-bottom: 1vh;
+}
+
+.timeline-text {
+    font-size: 0.9em;
+}
+
+#life-events-section {
+    height: 20vh;
+
+    background-image: url(./other/life-events-section.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-position: 0 -24vh;
+
+    box-shadow: -50vw 0 100px 75px var(--background-color) inset;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.life-events-section-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.life-events-section-text {
+    font-size: 1.3em;
+    margin-bottom: 2vh;
+}
+
+.nav-list-icon {
+    display: flex;
+    gap: 2vw;
+    position: relative;
+}
+
+.nav-list-icon::after {
+    content: "";
+    position: absolute;
+    right: 1vh;
+    bottom: 4vh;
+
+    width: 50px; 
+    height: 5px;
+
+    background: linear-gradient(
+    to right, 
+    var(--italic-color-one) 0%, var(--italic-color-one) 33.33%,
+    var(--italic-color-second) 33.33%, var(--italic-color-second) 66.66%,
+    var(--italic-color-third) 66.66%, var(--italic-color-third) 100%
+    )
+}
+
+.icon {
+    fill: var(--element-color);
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-span {
+    font-size: 0.8em;
+}
+
+.footer-span-copy {
+    position: relative;
+}
+
+.footer-span-copy::before {
+    content: "©";
+    position: absolute;
+    left: -1vw;
+    bottom: -0.2vh;
+    transform: scale(1.5);
 }
