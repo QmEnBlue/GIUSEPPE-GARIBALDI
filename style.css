@@ -12,6 +12,7 @@
     font-size: 16px;
 
     letter-spacing: 0.05vw;
+    transition: 0.3s;
 }
 
 html {
@@ -49,6 +50,10 @@ a {
     font-style: italic;
 }
 
+.first-text {
+    font-size: 1.1em;
+}
+
 .second-text {
     color: var(--secondary-color-text);
 }
@@ -58,8 +63,7 @@ a {
 .container {
     display: grid;
     height: 80%;
-
-    gap: 2vh;
+    gap: 3%;
 }
 
 .second-name {
@@ -73,14 +77,15 @@ a {
 }
 
 .prime-text {
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: 0.1vw;
     line-height: 3vh;
+    width: 32vw;
 }
 
 .link {
+    font-size: 1em;
     position: relative;
-    transition: 0.3s;
 }
 
 .link:hover {
@@ -136,8 +141,6 @@ header {
 }
 
 .header-nav-list {
-    font-size: 1.2em;
-
     list-style: none;
     display: flex;
     gap: 3vw;
@@ -157,7 +160,6 @@ header {
     width: 0;
     height: 1px;
     background: var(--primary-color-text);
-    transition: 0.3s;
 }
 
 .nav-li:hover:after {
@@ -201,7 +203,7 @@ header {
 
     background-color: var(--accent-color);
     padding: 1.2vh 3vw;
-    width: 8vw;
+    width: 9vw;
 
     display: flex;
     justify-content: space-between;
@@ -217,7 +219,7 @@ header {
 }
 
 .about-her-image {
-    width: 100%;
+    width: 25vw;
     height: 80%;
 }
 
@@ -236,7 +238,6 @@ header {
 
 .about-her-quote-text {
     font-size: 1.3em;
-    line-height: 3.5vh;
 }
 
 #philosophy {
@@ -251,9 +252,9 @@ header {
 
 .philosophy-block {
     position: relative;
-    padding: 3vh;
-    width: 25vh;
-    height: 25vh;
+    padding: 2vh;
+    width: 13vw;
+    height: 13vw;
     border: 1px solid var(--border-color);
 
     display: grid;
@@ -263,15 +264,12 @@ header {
 
 .philosophy-block-simbol {
     position: absolute;
-    left: 10%;
-    bottom: 70%;
+    left: 5%;
+    bottom: 65%;
 }
 
 .philosophy-text {
-    font-size: 1.1em;
-    line-height: 3vh;
-
-    margin-top: 4vh;
+    margin-top: 3vh;
 }
 
 #biography {
@@ -331,7 +329,7 @@ header {
     background-size: 100vh;
     background-position: 0 -24vh;
 
-    box-shadow: -50vw 0 100px 75px var(--background-color) inset;
+    box-shadow: -50vw 0 100px 2vw var(--background-color) inset;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -377,6 +375,10 @@ header {
     width: 2.5vh;
 }
 
+.youtube:hover {
+    fill: #c4302b;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -397,4 +399,113 @@ footer {
     left: -1vw;
     bottom: -0.2vh;
     transform: scale(1.5);
+}
+
+@media (max-device-width: 1440px) {
+    .nav-li {
+        font-size: 0.8em;
+    }
+    .main-button {
+        font-size: 0.8em;
+    }
+    .second-name {
+        font-size: 0.8em;
+    }
+    .first-name {
+        font-size: 1.6em;
+    }
+    .prime-text {
+        font-size: 0.9em;
+    }
+    .link {
+        font-size: 0.9em;
+    }
+
+    .simbol {
+        font-size: 3em;
+    }
+    .second-text {
+        font-size: 0.7em;
+    }
+    .first-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-device-width: 1024px) {
+    header {
+        grid-template-columns: 1fr auto;
+    }
+    .nav-li {
+        font-size: 0.8em;
+    }
+    .header-insert {
+        display: none;
+    }
+    .main-button {
+        font-size: 0.7em;
+    }
+    .second-name {
+        font-size: 0.6em;
+    }
+    .first-name {
+        font-size: 1.2em;
+    }
+    .prime-text {
+        font-size: 0.6em;
+    }
+    .link {
+        font-size: 0.6em;
+    }
+
+    .simbol {
+        font-size: 3em;
+    }
+    .second-text {
+        font-size: 0.7em;
+    }
+    .first-text {
+        font-size: 0.8em;
+    }
+
+    .timeline-date {
+        font-size: 1.2em;
+    }
+    .timeline-item{
+        font-size: 0.8em;
+    }
+
+    .life-events-section-text {
+        font-size: 1em;
+    }
+
+    .footer-span {
+        font-size: 0.6em;
+    }
+}
+
+@media (max-device-width: 800px) {
+    .main-second-name {
+        font-size: 0.8em;
+    }
+    .main-first-name {
+        font-size: 2.6em;
+    }
+    .main-text {
+        font-size: 1em;
+    }
+    .main-button {
+        width: 13vw;
+        font-size: 0.8em;
+    }
+
+    .simbol {
+        font-size: 2.5em;
+    }
+    .second-text {
+        font-size: 0.5em;
+    }
+    .first-text {
+        font-size: 0.6em;
+    }
 }
