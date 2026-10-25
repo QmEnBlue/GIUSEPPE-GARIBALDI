@@ -263,7 +263,7 @@ header {
 
 .philosophy-block {
     position: relative;
-    padding: 2vh;
+    padding: 3vh;
     width: 13vw;
     height: 13vw;
     border: 1px solid var(--border-color);
@@ -419,22 +419,24 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header, section, footer {
         padding: 0 3vw 0 3vw;
     }
 
-    .second-name {
+    .section {
+        height: 70vh;
+    }
 
+    .second-name {
+        font-size: 1.1em;
     }
     .first-name {
-
+        font-size: 1.6em;
     }
-    .prime-text {
-        font-size: 1em;
-    }
-    .link {
-        display: none;
+    .prime-text, .link {
+        max-width: 100vw;
+        font-size: 0.8em;
     }
 
     header {
@@ -451,7 +453,7 @@ footer {
         position: absolute;
         top: 6vh;
         right: 8%;
-        width: 15vw;
+        width: 25vw;
         background-color: var(--background-color);
 
         grid-template-columns: 1fr;
@@ -468,39 +470,6 @@ footer {
         width: 100%;
         text-align: center;
     }
-    .header-background{
-        background-size: 200vh;
-        background-position: -115vw 0vh;
-    }
-    .header-name {
-        font-size: 1.8em;
-    }
-    .main-container {
-        padding-top: 20vh;
-    }
-    .main-second-name   {
-        font-size: 1.1em;
-    }
-    .main-first-name {
-        font-size: 5em;
-    }
-    .main-text {
-        font-size: 1.3em;
-    }
-    .main-button {
-        font-size: 1.3em;
-        width: 25vw;
-    }
-
-    #about-her {
-        grid-template-columns: 9fr 7fr;
-    }
-    #about-her .container {
-        order: -1;
-    }
-    .about-her-quote {
-        display: none;
-    }
 
     .header-nav-list.active{
         transform: scaleY(100%);
@@ -513,5 +482,154 @@ footer {
     }
     #menu.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .header-background{
+        background-size: 200vh;
+        background-position: -250vw 0vh;
+    }
+    .header-name {
+        font-size: 1.8em;
+    }
+    .main-container {
+        padding-top: 30vh;
+    }
+    .main-second-name   {
+        font-size: 1.1em;
+    }
+    .main-first-name {
+        font-size: 3em;
+    }
+    .main-text {
+        font-size: 1em;
+    }
+    .main-button {
+        font-size: 1.3em;
+        width: 100%;
+    }
+
+    #about-her {
+        grid-template-columns: 1fr;
+    }
+    #about-her .container {
+        order: -1;
+    }
+    .about-her-quote {
+        display: none;
+    }
+
+    .first-text {
+        font-size: 0.8em;
+    }
+    .second-text {
+        font-size: 0.6em;
+    }
+
+    #philosophy {
+        grid-template-columns: 1fr;
+        height: 50vh;
+    }
+
+    .philosophy-block {
+        border: none;
+        border-left: 2px solid var(--accent-color);
+        padding: 0;
+        width: 30vw;
+        height: 40vw;
+    }
+    .philosophy-block-simbol {
+        display: none;
+    }
+    .philosophy-text {
+        margin-top: 2vh;
+        margin-left: 2vw    ;
+    }
+
+    #biography {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 6fr;
+    }
+    #biography .container .prime-text, #biography .container .link {
+        display: none;
+    }
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: row dense;
+    }
+    .timeline-item {
+        padding-top: 0;
+    }
+    .timeline-item::before {
+        width: 1px;
+        height: 100%;
+    }
+    .timeline-dot {
+        left: -0.8vw;
+        top: 2vh;
+    }
+    .timeline-date{
+        margin: 0;
+    }
+    .item-1, .item-2, .item-3 {
+        grid-column: 1;
+    }
+    .item-4, .item-5 {
+        grid-column: 2;
+    }
+    .timeline-text-1807::after{
+        content: " Джузеппе Гарибальди родился 4 июля 1807 года в Ницце в семье моряка.";
+    }
+    .timeline-text-1833::after{
+        content: " Гарибальди вступил в ряды итальянских повстанцев, начав свою военную деятельность.";
+    }
+    .timeline-text-1848::after{
+        content: " Он возглавил добровольцев в борьбе за независимость Италии и стал национальным героем.";
+    }
+    .timeline-text-1860::after{
+        content: " Гарибальди сыграл ключевую роль в объединении Южной Италии и передаче власти II.";
+    }
+    .timeline-text-1882::after{
+        content: " Гарибальди скончался 2 июня 1882 года на острове Капрера, оставив после себя легенду, которая живет и сегодня.";
+    }
+
+    #life-events-section{
+        box-shadow: none;
+        position: relative;
+        grid-template-columns: none;
+    }
+
+    .life-events-section-container{
+        grid-template-columns: 1fr;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .life-events-section-text{
+        font-size: 1em;
+        width: 60vw;
+    }
+    .nav-list-icon{
+        position: absolute;
+        right: 5vw;
+        bottom: 2vh;
+    }
+    .nav-list-icon::after {
+        bottom: -1.5vh;
+        right: 1vw;
+    }
+
+    footer {
+        grid-template-columns: 2fr 1fr;
+    }
+    .footer-span {
+        font-size: 0.6em;
+    }
+    .footer-span-copy{
+        margin-left: 3vw;
+    }
+    .footer-span-copy::before {
+        left: -2.5vw;
+        bottom: -0.4vh;
     }
 }
