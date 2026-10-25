@@ -9,7 +9,7 @@
 
     font-weight: 100;
     font-family: "Mate", serif;
-    font-size: 16px;
+    border: none;
 
     letter-spacing: 0.05vw;
     transition: 0.3s;
@@ -58,7 +58,7 @@ a {
     color: var(--secondary-color-text);
 }
 
-/* */
+/* section block*/
 
 .container {
     display: grid;
@@ -78,9 +78,8 @@ a {
 
 .prime-text {
     font-size: 1em;
-    letter-spacing: 0.1vw;
     line-height: 3vh;
-    width: 32vw;
+    max-width: 500px;
 }
 
 .link {
@@ -93,7 +92,7 @@ a {
 }
 
 header, section, footer {
-    padding: 0 10vw 0 10vw;
+    padding: 0 8vw 0 8vw;
 }
 
 header, footer {
@@ -116,8 +115,6 @@ header {
 }
 
 .header-name {
-    font-weight: 100;
-    font-style: normal;
     font-size: 1.4em;
 
     position: relative;
@@ -140,9 +137,29 @@ header {
   );
 }
 
+#menu {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    z-index: 10;
+}
+
+#menu span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--second-color-text);
+    transition: all 0.3s ease;
+}
+
 .header-nav-list {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 3vw;
 }
 
@@ -156,10 +173,10 @@ header {
     left: 50%;
     transform: translateX(-50%);
     bottom: -1px;
-    display: block;
-    width: 0;
+    width: 0%;
     height: 1px;
     background: var(--primary-color-text);
+    transition: 0.3s linear;
 }
 
 .nav-li:hover:after {
@@ -175,16 +192,13 @@ header {
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 3vh;
     padding-top: 15vh;
 }
 
 .main-second-name{
     font-size: 1em;
-    font-weight: 100;
-
     letter-spacing: 1vw;
 }
 
@@ -199,14 +213,10 @@ header {
 }
 
 .main-button {
-    text-decoration: none;
-
+    cursor: pointer;
     background-color: var(--accent-color);
-    padding: 1.2vh 3vw;
-    width: 9vw;
-
-    display: flex;
-    justify-content: space-between;
+    padding: 1.2vh 0.5vw;
+    width: 15vw;
 }
 
 .main-button:hover {
@@ -214,12 +224,13 @@ header {
 }
 
 #about-her {
+    display: grid;
     gap: 2vw;
     grid-template-columns: 1fr auto 1fr;
 }
 
 .about-her-image {
-    width: 25vw;
+    width: 100%;
     height: 80%;
 }
 
@@ -237,7 +248,7 @@ header {
 }
 
 .about-her-quote-text {
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 #philosophy {
@@ -246,8 +257,8 @@ header {
 }
 
 .philosophy-container{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .philosophy-block {
@@ -273,19 +284,19 @@ header {
 }
 
 #biography {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .timeline {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     max-width: 900px;
 }
 
 .timeline-item {
     position: relative;
-    flex: 1;
     padding-top: 3vh;
     padding-left: 3vw;
 }
@@ -329,16 +340,17 @@ header {
     background-size: 100vh;
     background-position: 0 -24vh;
 
-    box-shadow: -50vw 0 100px 2vw var(--background-color) inset;
-    display: flex;
-    justify-content: end;
+    box-shadow: -55vw 0 5vw 2vw var(--background-color) inset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
 .life-events-section-container {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
+    grid-column: 2;
+    max-width: 50vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .life-events-section-text {
@@ -348,6 +360,7 @@ header {
 
 .nav-list-icon {
     display: flex;
+    justify-content: space-between;
     gap: 2vw;
     position: relative;
 }
@@ -369,19 +382,19 @@ header {
     )
 }
 
-.icon {
+.life-events-section-icon {
     fill: var(--element-color);
     height: 2.5vh;
     width: 2.5vh;
 }
 
-.youtube:hover {
-    fill: #c4302b;
+.life-events-section-icon:hover {
+    fill: var(--accent-color);
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
@@ -401,111 +414,104 @@ footer {
     transform: scale(1.5);
 }
 
-@media (max-device-width: 1440px) {
-    .nav-li {
-        font-size: 0.8em;
-    }
-    .main-button {
-        font-size: 0.8em;
-    }
-    .second-name {
-        font-size: 0.8em;
-    }
-    .first-name {
-        font-size: 1.6em;
-    }
-    .prime-text {
-        font-size: 0.9em;
-    }
-    .link {
-        font-size: 0.9em;
-    }
-
-    .simbol {
-        font-size: 3em;
-    }
-    .second-text {
-        font-size: 0.7em;
-    }
-    .first-text {
-        font-size: 1em;
-    }
+.footer-span-italia{
+    text-align: end;
 }
 
-@media (max-device-width: 1024px) {
-    header {
-        grid-template-columns: 1fr auto;
+
+@media (max-width: 768px) {
+    header, section, footer {
+        padding: 0 3vw 0 3vw;
     }
-    .nav-li {
-        font-size: 0.8em;
+
+    .second-name {
+
+    }
+    .first-name {
+
+    }
+    .prime-text {
+        font-size: 1em;
+    }
+    .link {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
     }
     .header-insert {
         display: none;
     }
-    .main-button {
-        font-size: 0.7em;
+    #menu {
+        display: flex;
     }
-    .second-name {
-        font-size: 0.6em;
-    }
-    .first-name {
-        font-size: 1.2em;
-    }
-    .prime-text {
-        font-size: 0.6em;
-    }
-    .link {
-        font-size: 0.6em;
-    }
+    .header-nav-list {
+        position: absolute;
+        top: 6vh;
+        right: 8%;
+        width: 15vw;
+        background-color: var(--background-color);
 
-    .simbol {
-        font-size: 3em;
-    }
-    .second-text {
-        font-size: 0.7em;
-    }
-    .first-text {
-        font-size: 0.8em;
-    }
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1vh;
+        padding: 20px 0;
 
-    .timeline-date {
-        font-size: 1.2em;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 0.3s;
+        z-index: 5;
     }
-    .timeline-item{
-        font-size: 0.8em;
+    .nav-li {
+        width: 100%;
+        text-align: center;
     }
-
-    .life-events-section-text {
-        font-size: 1em;
+    .header-background{
+        background-size: 200vh;
+        background-position: -115vw 0vh;
     }
-
-    .footer-span {
-        font-size: 0.6em;
+    .header-name {
+        font-size: 1.8em;
     }
-}
-
-@media (max-device-width: 800px) {
-    .main-second-name {
-        font-size: 0.8em;
+    .main-container {
+        padding-top: 20vh;
+    }
+    .main-second-name   {
+        font-size: 1.1em;
     }
     .main-first-name {
-        font-size: 2.6em;
+        font-size: 5em;
     }
     .main-text {
-        font-size: 1em;
+        font-size: 1.3em;
     }
     .main-button {
-        width: 13vw;
-        font-size: 0.8em;
+        font-size: 1.3em;
+        width: 25vw;
     }
 
-    .simbol {
-        font-size: 2.5em;
+    #about-her {
+        grid-template-columns: 9fr 7fr;
     }
-    .second-text {
-        font-size: 0.5em;
+    #about-her .container {
+        order: -1;
     }
-    .first-text {
-        font-size: 0.6em;
+    .about-her-quote {
+        display: none;
+    }
+
+    .header-nav-list.active{
+        transform: scaleY(100%);
+    }
+    #menu.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    #menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    #menu.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
 }
