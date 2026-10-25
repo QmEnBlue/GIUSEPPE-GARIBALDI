@@ -527,6 +527,7 @@ footer {
 
     #philosophy {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
         height: 50vh;
     }
 
@@ -534,7 +535,7 @@ footer {
         border: none;
         border-left: 2px solid var(--accent-color);
         padding: 0;
-        width: 30vw;
+        width: 31vw;
         height: 40vw;
     }
     .philosophy-block-simbol {
@@ -601,13 +602,18 @@ footer {
 
     .life-events-section-container{
         grid-template-columns: 1fr;
-        margin-top: 5vh;
+        margin-top: 3vh;
         text-align: center;
     }
 
+    .life-events-section-container div .second-text {
+        display: none;
+    }
+
     .life-events-section-text{
-        font-size: 1em;
+        font-size: 0.9em;
         width: 60vw;
+        margin-bottom: 1vh;
     }
     .nav-list-icon{
         position: absolute;
