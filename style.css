@@ -263,7 +263,7 @@ header {
 
 .philosophy-block {
     position: relative;
-    padding: 3vh;
+    padding: 2vw;
     width: 13vw;
     height: 13vw;
     border: 1px solid var(--border-color);
@@ -276,7 +276,7 @@ header {
 .philosophy-block-simbol {
     position: absolute;
     left: 5%;
-    bottom: 65%;
+    bottom: 70%;
 }
 
 .philosophy-text {
