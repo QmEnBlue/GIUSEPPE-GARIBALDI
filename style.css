@@ -554,7 +554,7 @@ footer {
         display: none;
     }
     #biography  {
-        height: 90vh;
+        height: 100vh;
     }
     .timeline {
         grid-template-columns: repeat(2, 1fr);
