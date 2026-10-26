@@ -425,7 +425,7 @@ footer {
     }
 
     .section {
-        height: 70vh;
+        height: 80vh;
     }
 
     .second-name {
@@ -528,7 +528,7 @@ footer {
     #philosophy {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr;
-        height: 50vh;
+        height: 60vh;
     }
 
     .philosophy-block {
@@ -542,7 +542,7 @@ footer {
         display: none;
     }
     .philosophy-text {
-        margin-top: 2vh;
+        margin-top: 1vh;
         margin-left: 2vw    ;
     }
 
@@ -553,13 +553,16 @@ footer {
     #biography .container .prime-text, #biography .container .link {
         display: none;
     }
+    #biography  {
+        height: 90vh;
+    }
     .timeline {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-auto-flow: row dense;
     }
     .timeline-item {
-        padding-top: 0;
+        padding: 1vh 3vw;
     }
     .timeline-item::before {
         width: 1px;
