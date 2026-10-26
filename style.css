@@ -429,10 +429,10 @@ footer {
     }
 
     .second-name {
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
     .first-name {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     .prime-text, .link {
         max-width: 100vw;
@@ -551,13 +551,13 @@ footer {
 
     #biography {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr;
+        grid-template-rows: 1fr 6fr;
     }
     #biography .container .prime-text, #biography .container .link {
         display: none;
     }
     #biography  {
-        height: 100vh;
+        height: 80vh;
     }
     .timeline {
         grid-template-columns: repeat(2, 1fr);
@@ -619,10 +619,7 @@ footer {
         grid-template-columns: none;
     }
 
-    .life-events-section-container{
-        grid-template-columns: 1fr;
-        margin-top: 3vh;
-        text-align: center;
+    .life-events-section-container {
     }
 
     .life-events-section-container div .second-text {
