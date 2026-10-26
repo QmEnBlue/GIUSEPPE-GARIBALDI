@@ -545,10 +545,13 @@ footer {
         margin-top: 1vh;
         margin-left: 2vw    ;
     }
+    .philosophy-block .second-text {
+        font-size: 0.5em;
+    }
 
     #biography {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6fr;
+        grid-template-rows: 1fr 5fr;
     }
     #biography .container .prime-text, #biography .container .link {
         display: none;
@@ -558,12 +561,20 @@ footer {
     }
     .timeline {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 10vh);
         grid-auto-flow: row dense;
     }
     .timeline-item {
-        padding: 1vh 3vw;
+        padding-top: 2vh;
     }
+    .left-item { grid-column: 1; }
+    .left-item:nth-child(1){ grid-row: span 2;}
+    .left-item:nth-child(2){ grid-row: span 2;}
+    .left-item:nth-child(3){ grid-row: span 2;}
+    .right-item { grid-column: 2;}
+    .right-item:nth-child(4) { grid-row: span 3;}
+    .right-item:nth-child(5) { grid-row: span 3;}
+
     .timeline-item::before {
         width: 1px;
         height: 100%;
@@ -572,14 +583,19 @@ footer {
         left: -0.8vw;
         top: 2vh;
     }
+
+    .right-item .timeline-dot{
+        top: 9vh;
+    }
+    .right-item .timeline-date {
+        margin-top: 6vh;
+    }
+
     .timeline-date{
         margin: 0;
     }
-    .item-1, .item-2, .item-3 {
-        grid-column: 1;
-    }
-    .item-4, .item-5 {
-        grid-column: 2;
+    .timeline-text {
+        font-size: 0.8em;
     }
     .timeline-text-1807::after{
         content: " Джузеппе Гарибальди родился 4 июля 1807 года в Ницце в семье моряка.";
