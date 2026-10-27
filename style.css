@@ -216,6 +216,10 @@ header {
     cursor: pointer;
     background-color: var(--accent-color);
     padding: 1.2vh 0.5vw;
+    width: 100%;
+}
+
+.main-container a {
     width: 15vw;
 }
 
@@ -363,13 +367,14 @@ header {
     justify-content: space-between;
     gap: 2vw;
     position: relative;
+    height: 3vh;
 }
 
 .nav-list-icon::after {
     content: "";
     position: absolute;
-    right: 1vh;
-    bottom: 4vh;
+    right: 1vw;
+    bottom: -2vh;
 
     width: 50px; 
     height: 5px;
@@ -383,7 +388,7 @@ header {
 }
 
 .life-events-section-icon {
-    fill: var(--element-color);
+    fill: currentColor;
     height: 2.5vh;
     width: 2.5vh;
 }
@@ -454,10 +459,9 @@ footer {
         top: 6vh;
         right: 8%;
         width: 25vw;
-        background-color: var(--background-color);
 
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        background-color: var(--background-color);
+        flex-direction: column;
         gap: 1vh;
         padding: 20px 0;
 
@@ -505,6 +509,8 @@ footer {
     }
     .main-button {
         font-size: 1.3em;
+    }
+    .main-container a {
         width: 100%;
     }
 
